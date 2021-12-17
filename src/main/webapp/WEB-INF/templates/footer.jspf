@@ -1,0 +1,23 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+</div>
+</div>
+</div>
+</div>
+<script src="recursos/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="recursos/js/jquery.numeric.js" type="text/javascript"></script>
+<script src="recursos/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="recursos/js/bootbox.min.js" type="text/javascript"></script>
+<script src="recursos/js/menu.js"></script>
+<script src="recursos/js/main.js"></script>
+<script>
+    $("#salir").click(function () {
+        sessionStorage.removeItem("usuario");
+        $.get("logout", function () {
+            window.location = "http://localhost:9092/pyventas/login";
+            location.reload();
+        });
+
+    });
+</script>
